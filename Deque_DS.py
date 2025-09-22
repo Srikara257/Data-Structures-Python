@@ -57,6 +57,13 @@ class DequeManager:
         """Appends an element to the left side of the deque."""
         self._deque.appendleft(x)
 
+	""" There is no peek left or peek right in collections.deque we should use dq[0] and dq[-1]"""
+	def peekleft(self):
+		return self._deque[0]
+
+	def peekright(self):
+		return self._deque[-1]
+
     def pop(self):
         """Removes and returns an element from the right side of the deque."""
         return self._deque.pop()
@@ -132,3 +139,4 @@ if __name__ == "__main__":
     my_list = dm.to_list()
     print(f"Converted to list: {my_list}")
     print(f"Type of converted object: {type(my_list)}")
+
